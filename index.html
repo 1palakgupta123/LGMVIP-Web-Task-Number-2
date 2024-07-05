@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Registration Form</h2>
+            <form id="registrationForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter name..." required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter Email..." required>
+                
+                <label for="password">Create Password:</label>
+                <input type="password" id="password" name="password" placeholder="Create strong passoword...." required>
+                
+                <label for="gender">Gender:</label>
+                <div class="gender-options">
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female" required>
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="Other" required>
+                    <label for="other">Other</label>
+                </div>
+                
+                <label for="skills">Skills:</label>
+                <div class="skills-options">
+                    <input type="checkbox" id="html" name="skills" value="HTML">
+                    <label for="html">HTML</label>
+                    <input type="checkbox" id="css" name="skills" value="CSS">
+                    <label for="css">CSS</label>
+                    <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+                    <label for="javascript">JavaScript</label>
+                    <input type="checkbox" id="python" name="skills" value="Python">
+                    <label for="python">Python</label>
+                </div>
+                <div class="image-box">
+                    <label for="image">Upload Image:</label>
+                    <div class="image-preview">
+                        <img id="preview-image" src="#" alt="Uploaded Image" class="hidden">
+                        
+                    </div>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                </div>
+    
+                <input type="submit" value="Register">
+            </form>
+        </div>
+        <div class="id-card-container">
+            <div id="displayData" class="hidden">
+                <div class="id-card">
+                    <h3>ID Card</h3>
+                    <img id="displayImage" src="" alt="Uploaded Image" width="100">
+                    <p><strong>Name:</strong> <span id="displayName"></span></p>
+                    <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+                    <p><strong>Gender:</strong> <span id="displayGender"></span></p>
+                    <p><strong>Skills:</strong> <span id="displaySkills"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
